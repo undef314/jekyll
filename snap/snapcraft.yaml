@@ -1,0 +1,33 @@
+name: jekyll-jl
+version: 3.6.2
+summary: A simple, blog-aware, static site generator. 
+description: |
+  Jekyll is a simple, blog-aware, static site generator 
+  perfect for personal, project, or organization sites. 
+  Think of it like a file-based CMS, without all the 
+  complexity. Jekyll takes your content, renders Markdown 
+  and Liquid templates, and spits out a complete, 
+  static website ready to be served by Apache, Nginx or 
+  another web server. Jekyll is the engine behind 
+  GitHub Pages, which you can use to host sites right 
+  from your GitHub repositories.
+
+
+grade: devel
+confinement: devmode
+
+apps:
+  jekyll-jl: 
+    environment:
+      RUBYLIB: $SNAP/usr/lib/ruby/2.4.0:$SNAP/usr/lib/x86_64-linux-gnu/ruby/2.4.0
+      GEM_HOME: $SNAP/gems
+      GEM_PATH: $SNAP 
+    command: bin/jekyll
+    plugs: [home]
+
+parts:
+  jekyll-jl:
+    plugin: ruby
+    build-packages: [gcc, make, ruby-dev]
+    gems: ['bundler', 'jekyll']
+    
