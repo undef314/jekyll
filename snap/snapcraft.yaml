@@ -30,4 +30,5 @@ parts:
     plugin: ruby
     build-packages: [gcc, make, ruby-dev]
     gems: ['bundler', 'jekyll']
+    source-tag: 3.6.2
     

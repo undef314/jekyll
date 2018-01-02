@@ -1,6 +1,4 @@
-[![Gem Version](https://img.shields.io/gem/v/jekyll.svg)][ruby-gems]
-
-<h1 align="center">
+[<h1 align="center">
   <br />
   Jekyll
 </h1>
